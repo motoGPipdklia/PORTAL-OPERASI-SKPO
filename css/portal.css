@@ -685,7 +685,7 @@ a {
 body {
   background:
     linear-gradient(rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.38)),
-    url("../images/background-portal.png") center top / cover fixed no-repeat,
+    url("../images/background-portal.jpg") center top / cover fixed no-repeat,
     #050607;
 }
 
