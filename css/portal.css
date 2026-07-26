@@ -726,7 +726,7 @@ body::before {
 
 .portal-logo-shell {
   display: grid;
-  width: clamp(230px, 24vw, 350px);
+  width: clamp(360px, 38vw, 560px);
   place-items: center;
   background: transparent;
   filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.75));
@@ -813,7 +813,7 @@ body::before {
   }
 
   .portal-logo-shell {
-    width: 230px;
+    width: min(84vw, 360px);
   }
 
   .portal-main {
