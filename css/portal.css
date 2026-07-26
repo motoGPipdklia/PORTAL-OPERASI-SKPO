@@ -548,6 +548,23 @@ a {
   content: "";
 }
 
+.bottom-logo {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-top: 28px;
+  padding: 10px 0 24px;
+}
+
+.bottom-logo img {
+  display: block;
+  width: min(480px, 52vw);
+  max-height: 125px;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.72));
+}
+
 .site-footer {
   display: flex;
   min-height: 82px;
@@ -826,5 +843,15 @@ body::before {
 
   .card-visual {
     height: 190px;
+  }
+
+  .bottom-logo {
+    margin-top: 22px;
+    padding-bottom: 18px;
+  }
+
+  .bottom-logo img {
+    width: min(88vw, 380px);
+    max-height: 105px;
   }
 }
