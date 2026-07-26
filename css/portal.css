@@ -677,3 +677,170 @@ a {
     color: #d3d7dc;
   }
 }
+
+/* ================================================================
+   IDENTITI VISUAL BERGAMBAR
+================================================================ */
+
+body {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.38)),
+    url("../images/background-portal.png") center top / cover fixed no-repeat,
+    #050607;
+}
+
+body::before {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.04),
+    rgba(0, 0, 0, 0.2) 45%,
+    rgba(0, 0, 0, 0.52)
+  );
+}
+
+.ambient {
+  display: none;
+}
+
+.site-header {
+  min-height: 245px;
+  justify-content: center;
+  padding-top: 135px;
+  padding-bottom: 24px;
+}
+
+.portal-logo-link {
+  display: inline-flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.portal-logo-shell {
+  display: grid;
+  width: clamp(210px, 20vw, 300px);
+  min-height: 70px;
+  overflow: hidden;
+  place-items: center;
+  padding: 10px 16px;
+  border: 1px solid rgba(212, 175, 55, 0.62);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow:
+    0 16px 38px rgba(0, 0, 0, 0.52),
+    0 0 28px rgba(212, 175, 55, 0.12);
+}
+
+.portal-logo {
+  width: 100%;
+  height: auto;
+}
+
+.portal-logo-caption {
+  color: #d7dbe0;
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  text-shadow: 0 2px 7px #000;
+}
+
+.portal-main {
+  padding-top: 42px;
+}
+
+.hero {
+  margin-bottom: 32px;
+}
+
+.hero h1,
+.hero-description,
+.eyebrow {
+  text-shadow: 0 3px 14px rgba(0, 0, 0, 0.9);
+}
+
+.operation-card {
+  min-height: 480px;
+  padding: 22px;
+  background:
+    linear-gradient(150deg, rgba(255, 255, 255, 0.07), transparent 35%),
+    rgba(10, 13, 17, 0.94);
+  backdrop-filter: blur(8px);
+}
+
+.card-visual {
+  position: relative;
+  display: block;
+  width: calc(100% + 44px);
+  height: 220px;
+  overflow: hidden;
+  margin: 18px -22px 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.45s ease, filter 0.45s ease;
+}
+
+.card-photo-shade {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, transparent 52%, rgba(8, 10, 14, 0.8)),
+    linear-gradient(90deg, color-mix(in srgb, var(--accent) 9%, transparent), transparent 55%);
+  pointer-events: none;
+}
+
+.operation-card:hover .card-photo,
+.operation-card:focus-visible .card-photo {
+  filter: saturate(1.08) contrast(1.04);
+  transform: scale(1.035);
+}
+
+.card-title {
+  font-size: clamp(32px, 4.2vw, 48px);
+}
+
+@media (max-width: 760px) {
+  body {
+    background-position: center top;
+    background-size: auto 100%;
+    background-attachment: scroll;
+  }
+
+  .site-header {
+    min-height: 155px;
+    padding-top: 28px;
+    padding-bottom: 20px;
+  }
+
+  .portal-logo-shell {
+    width: 210px;
+    min-height: 60px;
+    padding: 8px 13px;
+  }
+
+  .portal-logo-caption {
+    max-width: 260px;
+    font-size: 9px;
+    text-align: center;
+  }
+
+  .portal-main {
+    padding-top: 32px;
+  }
+
+  .operation-card {
+    min-height: 430px;
+  }
+
+  .card-visual {
+    height: 190px;
+  }
+}
