@@ -1,0 +1,74 @@
+
+/* =========================================================
+   TAMBAHAN PORTAL - BUTANG MASUK + PASANG APLIKASI
+   Tambahkan di bahagian bawah portal.css
+========================================================= */
+
+.operation-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-action-group {
+  position: relative;
+  z-index: 4;
+  display: grid;
+  gap: 10px;
+  width: 100%;
+  margin-top: auto;
+}
+
+.card-action-group .card-action {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.card-action-primary,
+.card-action-install {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 52px;
+  padding: 0 18px;
+  border-radius: 12px;
+  text-decoration: none;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 800;
+  letter-spacing: .04em;
+}
+
+.card-action-primary {
+  border: 1px solid rgba(255,255,255,.16);
+}
+
+.card-action-install {
+  appearance: none;
+  -webkit-appearance: none;
+  border: 1px solid rgba(255,255,255,.22);
+  background: rgba(255,255,255,.08);
+  color: inherit;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.card-action-install:hover,
+.card-action-install:focus-visible {
+  background: rgba(255,255,255,.14);
+  transform: translateY(-1px);
+}
+
+.install-icon {
+  font-size: 1.15rem;
+  line-height: 1;
+}
+
+@media (max-width: 640px) {
+  .card-action-primary,
+  .card-action-install {
+    min-height: 48px;
+    padding: 0 14px;
+    font-size: .9rem;
+  }
+}
