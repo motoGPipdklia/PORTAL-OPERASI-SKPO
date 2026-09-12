@@ -1,34 +1,22 @@
 "use strict";
 
-/* ================================================================
-   SKPO — PORTAL OPERASI
-   Pautan utama kekal sebagai pautan HTML agar portal masih berfungsi
-   walaupun JavaScript gagal dimuatkan.
-================================================================ */
+document.addEventListener("DOMContentLoaded", () => {
+  const installButtons = document.querySelectorAll("[data-install-url]");
 
-(function mulakanPortalSKPO() {
-  const tahunSemasa = document.getElementById("tahunSemasa");
-  const kadOperasi = document.querySelectorAll(".operation-card");
+  installButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const url = button.dataset.installUrl;
+      const operationName = button.dataset.operationName || "SKPO";
 
-  if (tahunSemasa) {
-    tahunSemasa.textContent = String(new Date().getFullYear());
-  }
+      if (!url) return;
 
-  kadOperasi.forEach((kad) => {
-    kad.addEventListener("click", () => {
-      const namaOperasi = kad.dataset.operation || "operasi";
-      document.title = `Membuka ${namaOperasi} | SKPO`;
-    });
+      // Browser tidak membenarkan portal luar daripada scope PWA
+      // membuka native install prompt bagi aplikasi lain.
+      // Oleh itu pengguna dihantar ke halaman PWA sebenar dengan ?install=1.
+      sessionStorage.setItem("skpoInstallSource", "portal");
+      sessionStorage.setItem("skpoInstallOperation", operationName);
 
-    /*
-      Enter berfungsi secara asal untuk pautan. Kod ini menambah sokongan
-      kekunci Space supaya kad terasa seperti pilihan aplikasi.
-    */
-    kad.addEventListener("keydown", (event) => {
-      if (event.key !== " ") return;
-
-      event.preventDefault();
-      window.location.assign(kad.href);
+      window.location.href = url;
     });
   });
-})();
+});
