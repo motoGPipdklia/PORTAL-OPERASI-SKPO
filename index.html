@@ -10,8 +10,8 @@
   >
   <title>Portal Rasmi | SKPO</title>
 
-  <link rel="stylesheet" href="css/portal.css?v=20260726-008">
-  <script src="js/portal.js?v=20260726-008" defer></script>
+  <link rel="stylesheet" href="css/portal.css?v=20260912-pwa-001">
+  <script src="js/portal.js?v=20260912-pwa-001" defer></script>
 </head>
 
 <body>
@@ -43,12 +43,8 @@
       id="pilihanOperasi"
       aria-label="Senarai pilihan operasi"
     >
-      <a
-        class="operation-card motogp-card"
-        href="https://motogpipdklia.github.io/SISTEM-KEHADIRAN-PENUGASAN-OPERASI/"
-        data-operation="MotoGP"
-        aria-label="Masuk ke Sistem Operasi MotoGP"
-      >
+      <!-- MotoGP -->
+      <article class="operation-card motogp-card" data-operation="MotoGP">
         <span class="card-glow" aria-hidden="true"></span>
 
         <span class="card-topline">
@@ -75,18 +71,30 @@
           <span class="card-location">Petronas Sepang International Circuit</span>
         </span>
 
-        <span class="card-action">
-          <span>MASUK SISTEM</span>
-          <span class="arrow" aria-hidden="true">→</span>
-        </span>
-      </a>
+        <div class="card-action-group">
+          <a
+            class="card-action card-action-primary"
+            href="https://motogpipdklia.github.io/SISTEM-KEHADIRAN-PENUGASAN-OPERASI/"
+            aria-label="Masuk ke Sistem Operasi MotoGP"
+          >
+            <span>MASUK SISTEM</span>
+            <span class="arrow" aria-hidden="true">→</span>
+          </a>
 
-      <a
-        class="operation-card f1-card"
-        href="https://motogpipdklia.github.io/SISTEM-KEHADIRAN-PENUGASAN-OPERASI-FORMULA-1/"
-        data-operation="Formula 1"
-        aria-label="Masuk ke Sistem Operasi Formula 1"
-      >
+          <button
+            class="card-action card-action-install"
+            type="button"
+            data-install-url="https://motogpipdklia.github.io/SISTEM-KEHADIRAN-PENUGASAN-OPERASI/?install=1"
+            data-operation-name="MotoGP"
+          >
+            <span>PASANG APLIKASI</span>
+            <span class="install-icon" aria-hidden="true">↓</span>
+          </button>
+        </div>
+      </article>
+
+      <!-- Formula 1 -->
+      <article class="operation-card f1-card" data-operation="Formula 1">
         <span class="card-glow" aria-hidden="true"></span>
 
         <span class="card-topline">
@@ -113,11 +121,27 @@
           <span class="card-location">Petronas Sepang International Circuit</span>
         </span>
 
-        <span class="card-action">
-          <span>MASUK SISTEM</span>
-          <span class="arrow" aria-hidden="true">→</span>
-        </span>
-      </a>
+        <div class="card-action-group">
+          <a
+            class="card-action card-action-primary"
+            href="https://motogpipdklia.github.io/SISTEM-KEHADIRAN-PENUGASAN-OPERASI-FORMULA-1/"
+            aria-label="Masuk ke Sistem Operasi Formula 1"
+          >
+            <span>MASUK SISTEM</span>
+            <span class="arrow" aria-hidden="true">→</span>
+          </a>
+
+          <button
+            class="card-action card-action-install"
+            type="button"
+            data-install-url="https://motogpipdklia.github.io/SISTEM-KEHADIRAN-PENUGASAN-OPERASI-FORMULA-1/?install=1"
+            data-operation-name="Formula 1"
+          >
+            <span>PASANG APLIKASI</span>
+            <span class="install-icon" aria-hidden="true">↓</span>
+          </button>
+        </div>
+      </article>
     </section>
 
     <p class="security-note">
